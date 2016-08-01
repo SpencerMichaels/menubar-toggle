@@ -3,8 +3,8 @@ Toggle the OS X menu bar's autohide state from the command line.
 
 Install with:
 ```
-    brew tap sxmichaels/tap
-    brew install menubar-toggle
+brew tap sxmichaels/tap
+brew install menubar-toggle
 ```
 
 # Credits
