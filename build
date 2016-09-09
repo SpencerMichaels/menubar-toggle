@@ -2,4 +2,4 @@
 
 filename=menubar-toggle
 
-clang $filename.m -fmodules -mmacosx-version-min=10.10 -o $filename
+clang $filename.m -fmodules -mmacosx-version-min=10.11 -o $filename

@@ -1,5 +1,5 @@
-# menubar-toggle
-Toggle the OS X menu bar's autohide state from the command line.
+# menubar-toggle (OS X 10.11+)
+Toggle OS X El Capitan's menu bar autohide state from the command line.
 
 Install with:
 ```
