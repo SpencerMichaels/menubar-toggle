@@ -34,7 +34,7 @@ int main()
             }
 
             else if ([args[1] isEqualToString:@"--current"]) {
-              printf("%s", [mode UTF8String]);
+              printf("%s\n", [mode isEqualToString:@"0"] ? "Always show" : "Auto-hide");
             }
         } else {
             // Default to toggling mode
