@@ -8,6 +8,11 @@ int main()
             (CFStringRef) @"_HIHideMenuBar", kCFPreferencesAnyApplication,
             kCFPreferencesCurrentUser, kCFPreferencesCurrentHost));
 
+        if (!mode) {
+            puts("Error: Unable to read _HIHideMenuBar preference.");
+            return 1;
+        }
+
         if (args.count > 1) {
             if ([args[1] isEqualToString:@"--version"]) {
                 puts("1.0");
