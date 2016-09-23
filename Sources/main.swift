@@ -9,13 +9,13 @@ let kNotificationName = CFNotificationName("AppleInterfaceMenuBarHidingChangedNo
 
 let kHelpMessage =
     "Usage:\n" +
-    "  menubar-toggle [--show | --auto | --current]\n\n" +
-    "Options:\n" +
-    "  -s, --show     Set the menu bar to show always.\n" +
-    "  -a, --auto     Set the menu bar to auto-hide.\n" +
-    "  -c, --current  Print the current menu bar mode.\n" +
-    "  -h, --help     Show usage information.\n\n" +
-    "  If no arguments are provided, the mode will be toggled."
+        "  menubar-toggle [--show | --auto | --current]\n\n" +
+        "Options:\n" +
+        "  -s, --show     Set the menu bar to show always.\n" +
+        "  -a, --auto     Set the menu bar to auto-hide.\n" +
+        "  -c, --current  Print the current menu bar mode.\n" +
+        "  -h, --help     Show usage information.\n\n" +
+"  If no arguments are provided, the mode will be toggled."
 
 enum MenubarToggleError: Error {
     case couldNotReadPreference
@@ -73,23 +73,23 @@ guard let autoHide = try? getAutoHideModeAndAutoCreate() else {
 if CommandLine.arguments.count <= 1 {
     setAutoHideMode(autoHide: !autoHide)
 }
-// Show the version
+    // Show the version
 else if (["--version", "-v"].contains(CommandLine.arguments[1])) {
     print("2.0.0")
 }
-// Always show the menu bar
+    // Always show the menu bar
 else if (["-s", "--show"].contains(CommandLine.arguments[1])) {
     setAutoHideMode(autoHide: false)
 }
-// Automatically hide the menu bar
+    // Automatically hide the menu bar
 else if (["-a", "--auto"].contains(CommandLine.arguments[1])) {
     setAutoHideMode(autoHide: true);
 }
-// Show current mode
+    // Show current mode
 else if (["-c", "--current"].contains(CommandLine.arguments[1])) {
     print(autoHide ? "Auto-hide" : "Always show");
 }
-// Show usage information
+    // Show usage information
 else {
     print(kHelpMessage);
 }
