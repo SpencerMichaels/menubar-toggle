@@ -14,8 +14,9 @@ let kHelpMessage =
         "  -s, --show     Set the menu bar to show always.\n" +
         "  -a, --auto     Set the menu bar to auto-hide.\n" +
         "  -c, --current  Print the current menu bar mode.\n" +
-        "  -h, --help     Show usage information.\n\n" +
-"  If no arguments are provided, the mode will be toggled."
+        "  -h, --help     Print usage information.\n" +
+        "  -v, --version  Print version number.\n\n" +
+        "  If no arguments are provided, the mode will be toggled."
 
 enum MenubarToggleError: Error {
     case couldNotReadPreference
