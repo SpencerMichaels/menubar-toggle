@@ -76,7 +76,7 @@ if CommandLine.arguments.count <= 1 {
 }
     // Show the version
 else if (["--version", "-v"].contains(CommandLine.arguments[1])) {
-    print("2.0.0")
+    print("2.0.1")
 }
     // Always show the menu bar
 else if (["-s", "--show"].contains(CommandLine.arguments[1])) {
