@@ -1,6 +1,6 @@
 import Foundation
 
-let kAppVersion = "2.0.1"
+let kAppVersion = "2.0.3"
 
 let kPreferenceKey = "_HIHideMenuBar" as CFString
 let kApplicationID = kCFPreferencesAnyApplication
