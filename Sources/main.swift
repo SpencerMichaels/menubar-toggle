@@ -2,7 +2,8 @@ import Foundation
 
 let kAppVersion = "2.0.1"
 
-let kPreferenceKey = "_HIHideMenuBar" as CFString let kApplicationID = kCFPreferencesAnyApplication
+let kPreferenceKey = "_HIHideMenuBar" as CFString
+let kApplicationID = kCFPreferencesAnyApplication
 let kUserName = kCFPreferencesCurrentUser
 let kHostName = kCFPreferencesAnyHost
 
@@ -68,7 +69,7 @@ func getAutoHideModeAndAutoCreate() throws -> Bool {
 // Attempt to get the preference, creating it with a default value if it does not already exist
 guard let autoHide = try? getAutoHideModeAndAutoCreate() else {
     print("Fatal error: Preference does not exist, and a default value could not be written.")
-    return 1;
+    exit(1);
 }
 
 // Toggle if no arguments are given
